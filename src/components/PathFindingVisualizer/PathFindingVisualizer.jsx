@@ -10,7 +10,7 @@ class PathFindingVisualizer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            matrix: [], // grid
+            matrix: [],
             mouseIsPressed: false,
         };
 
@@ -66,7 +66,7 @@ class PathFindingVisualizer extends Component {
             setTimeout(() => {
                 const node = nodesInShortestPathOrder[i];
                 document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-shortest-path';
-            }, 50 * i);
+            },50 * i);
         }
     }
 
@@ -83,7 +83,7 @@ class PathFindingVisualizer extends Component {
         const { matrix, mouseIsPressed } = this.state;
         return (
             <>
-                <button onClick={this.visualizeDijkstra}>
+                <button className = "button" onClick={this.visualizeDijkstra}>
                     Visualize Dijkstra's Algorithm
                 </button>
                 <div className='grid'>
